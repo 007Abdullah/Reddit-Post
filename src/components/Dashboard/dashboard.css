@@ -17,10 +17,14 @@ li{
     text-decoration: none;
    
 }
-
-.check{
+.checks{
     width: 50%;
-    margin: 0 auto;
-    margin-bottom: 15px;
-    
+   margin: 0 auto;
 }
+.card{
+    margin:0 auto;
+    padding: 10px;
+    margin-bottom: 50px;
+
+}
+

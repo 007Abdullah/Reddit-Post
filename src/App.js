@@ -7,14 +7,25 @@ import Grid from '@material-ui/core/Grid';
 import { useState } from 'react'
 
 function App() {
-  const [title, setTitle] = useState("");
-  const [posts, setPosts] = useState("");
+  const [title, setTitle] = useState([{
+    title: "",
+    post: ""
+  }]);
+  const [posts, setPosts] = useState({});
+
+
 
   function handelSubmit(e) {
     e.preventDefault();
-    // setTitle()
-    console.log("check")
-    alert("check")
+    setTitle(prev => {
+     return prev.concat([{
+        title: document.getElementById('title').value,
+        post: document.getElementById('textarea').value
+      }])
+    })
+    console.log("CHck karna han E ma kia hn", e.target.value)
+
+
   }
 
   //[name]: value
@@ -38,15 +49,18 @@ function App() {
             <Grid item xs={12}>
               <Paper className={classes.paper}>
                 <form className={classes.root} action="" onSubmit={handelSubmit}>
-                  <TextField onChange={(e) => setTitle(e.target.value)} color="secondary" value={title} name="Title" />
+                  <TextField
+                    id="title"
+                    color="secondary" name="Title" />
                   <br />
                   <br />
+                  {JSON.stringify(title)}
                   <TextareaAutosize placeholder="Write Text" id="textarea"
-                    onChange={(e) => setPosts(e.target.value)} value={posts} name="Post" />
+                    name="Post" />
                   <br />
                   <br />
                   {/* <TextareaAutosize aria-label="minimum height" rowsMin={5} colMin={10} placeholder="Write Text" /> */}
-                  <Button variant="contained">POST</Button>
+                  <Button variant="contained" type="submit">POST</Button>
                 </form>
               </Paper>
             </Grid>
