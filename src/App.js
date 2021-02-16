@@ -7,13 +7,17 @@ import Grid from '@material-ui/core/Grid';
 import { useState } from 'react'
 
 function App() {
-  const [posts, setposts] = useState({});
+  const [title, setTitle] = useState("");
+  const [posts, setPosts] = useState("");
+
   function handelSubmit(e) {
     e.preventDefault();
-    console.log(e);
+    // setTitle()
+    console.log("check")
+    alert("check")
   }
 
-
+  //[name]: value
 
   const useStyles = makeStyles((theme) => ({
     root: {
@@ -34,10 +38,11 @@ function App() {
             <Grid item xs={12}>
               <Paper className={classes.paper}>
                 <form className={classes.root} action="" onSubmit={handelSubmit}>
-                  <TextField id="Title" label="Title" value={posts.name} onChange={(e) => { setposts(e.target.value) }} color="secondary" />
+                  <TextField onChange={(e) => setTitle(e.target.value)} color="secondary" value={title} name="Title" />
                   <br />
                   <br />
-                  <TextareaAutosize aria-label="empty textarea" placeholder="Write Text" id="textarea" value={posts.text} onChange={(e) => { setposts(e.target.value) }} />
+                  <TextareaAutosize placeholder="Write Text" id="textarea"
+                    onChange={(e) => setPosts(e.target.value)} value={posts} name="Post" />
                   <br />
                   <br />
                   {/* <TextareaAutosize aria-label="minimum height" rowsMin={5} colMin={10} placeholder="Write Text" /> */}
