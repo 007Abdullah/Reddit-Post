@@ -11,21 +11,18 @@ function App() {
     title: "",
     post: ""
   }]);
-  const [posts, setPosts] = useState({});
+
 
 
 
   function handelSubmit(e) {
     e.preventDefault();
     setTitle(prev => {
-     return prev.concat([{
+      return prev.concat([{
         title: document.getElementById('title').value,
         post: document.getElementById('textarea').value
-      }])
-    })
-    console.log("CHck karna han E ma kia hn", e.target.value)
-
-
+      }]);
+    });
   }
 
   //[name]: value

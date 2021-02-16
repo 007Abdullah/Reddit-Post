@@ -20,7 +20,9 @@ function Dashboard() {
     return (
         <>
             <div>
-                {posts.length ? null : "Loding......"}
+                <div className="loadingtext">
+                    <p className="loading">{posts.length ? null : "Loading......"}</p>
+                </div>
                 {posts.map(post => (
 
                     <div className="checks" key={post.id}>
@@ -36,6 +38,7 @@ function Dashboard() {
                     </div>
                 ))
                 }
+
             </div>
 
         </>

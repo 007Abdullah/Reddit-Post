@@ -27,4 +27,12 @@ li{
     margin-bottom: 50px;
 
 }
+.loadingtext{
+    width: 100%;
+    margin: 50px;
+}
+.loading{
+    font-size: x-large;
+    text-align: center;
+}
 
