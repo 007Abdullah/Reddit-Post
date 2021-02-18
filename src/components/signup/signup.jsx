@@ -43,22 +43,22 @@ function Signup() {
                             <label htmlFor="defaultFormRegisterNameEx" className="grey-text">
                                 Your name
                              </label>
-                            <input type="text" id="name" className="form-control" />
+                            <input type="text" id="name" className="form-control"  required/>
                             <br />
                             <label htmlFor="defaultFormRegisterEmailEx" className="grey-text">
                                 Your email
                             </label>
-                            <input type="email" id="email" className="form-control" />
+                            <input type="email" id="email" className="form-control" required/>
                             <br />
                             <label htmlFor="defaultFormRegisterConfirmEx" className="grey-text">
                                 Phone
                             </label>
-                            <input type="text" id="phone" className="form-control" />
+                            <input type="text" id="phone" className="form-control" required />
                             <br />
                             <label htmlFor="defaultFormRegisterPasswordEx" className="grey-text">
                                 Your password
                             </label>
-                            <input type="password" id="password" className="form-control" />
+                            <input type="password" id="password" className="form-control" required />
                             <div className="text-center mt-4">
                                 <MDBBtn color="unique" type="submit">
                                     Register
