@@ -29,7 +29,7 @@ function Dashboard() {
                         <Card className="card">
                             <Card.Body>
                                 <Card.Title>{post.title}</Card.Title>
-                                <Card.Subtitle className="mb-2 text-muted">{post.subreddit}</Card.Subtitle>
+                                <Card.Subtitle className="mb-2 text-muted"><span>subreddit:</span>{post.subreddit}</Card.Subtitle>
                                 <Card.Subtitle className="mb-2 text-muted"><span>ups:</span>{post.ups}</Card.Subtitle>
                                 <Card.Subtitle className="mb-2 text-muted"><span>upvote_ratio:</span>{post.upvote_ratio}</Card.Subtitle>
                                 <Card.Text>{post.selftext}</Card.Text>
